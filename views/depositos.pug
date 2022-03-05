@@ -1,0 +1,170 @@
+doctype 
+html(lang='en')
+  head
+    title GoodWarehouse
+    //
+      Known Template
+      http://www.templatemo.com/tm-516-known
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/owl.carousel.css')
+    link(rel='stylesheet', href='/css/owl.theme.default.min.css')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', rel='stylesheet')
+    // MAIN CSS
+    link(rel='stylesheet', href='css/templatemo-style.css')
+  body#top(data-spy='scroll', data-target='.navbar-collapse', data-offset='50')
+    // PRE LOADER
+    section.preloader
+      .spinner
+        span.spinner-rotate
+    // MENU
+    section.navbar.custom-navbar.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon.icon-bar
+            span.icon.icon-bar
+            span.icon.icon-bar
+          // lOGO TEXT HERE
+          a.navbar-brand(href='#') GoodWarehouse
+        // MENU LINKS
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-nav-first
+            li
+              a.smoothScroll(href='/cliente#top') Inicio
+            li
+              a.smoothScroll(href='/cliente#about') Beneficios
+            li
+              a.smoothScroll(href='/cliente#team') Ubícanos
+            li
+              a.smoothScroll(href='/cliente#courses') Almacenamiento
+            li
+              a.smoothScroll(href='/cliente#testimonial') Comentarios
+            li
+              a.smoothScroll(href='/cliente#contact') Contacto
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+                a.dropdown-toggle(data-toggle='dropdown', href='') #{username}
+                //#{username}
+                ul.dropdown-menu
+                    li
+                        a.smoothScroll(href='') Perfil
+                    li
+                        a.smoothScroll(href='/reservaciones') Mis Reservaciones
+                    li
+                        a.smoothScroll(href='/logout') Cerrar Sesión
+    // Articulo
+    each producto in miproducto
+      section#art
+        .container
+          .row
+            h2.text-center Depósitos de #{producto.nombre}
+            .col-md-6.col-sm-12
+              br
+              br
+              .art-image
+              img.img-responsive(src=producto.imagePath)
+            .col-md-6.col-sm-12
+              .about-info
+                h2.text-center Descripción
+                div
+                    p
+                      | #{producto.descripcion1}
+                      figcaption
+                        h4 #{producto.descripcion2}
+                    h4 #{producto.descripcion3}
+                    h4 #{producto.descripcion4}
+                    h3.text-center Precio: $ #{producto.precio}
+                form(action='/reservar', method='get')
+                  .form-group.text-center
+                      input.btn.btn-success(type='submit', value='Reservar Depósitos!')
+
+
+    // CONTACT
+    section#contact
+      .container
+        .row
+          .col-md-6.col-sm-12
+            form#contact-form(role='form', action='', method='post')
+              .section-title
+                h2
+                  | Contáctenos
+                  small nos encantan las conversaciones. ¡Dejanos hablar!
+              .col-md-12.col-sm-12
+                input.form-control(type='text', placeholder='Ingrese su nombre', name='name', required='')
+                input.form-control(type='email', placeholder='Ingrese su correo', name='email', required='')
+                textarea.form-control(rows='6', placeholder='Describa sus necesidades de almacenamiendo', name='message', required='')
+              .col-md-4.col-sm-12
+                input.form-control(type='submit', name='send message', value='Enviar Mensaje')
+          .col-md-6.col-sm-12
+            .contact-image
+              img.img-responsive(src='images/contact-image.jpg', alt='Smiling Two Girls')
+    // FOOTER
+    footer#footer
+      .container
+        .row
+          .col-md-4.col-sm-6
+            .footer-info
+              .section-title
+                h2 GoodWarehouse
+              address
+                p
+                  | Av. República de Panamá,
+                  br
+                  | 							 (Clayton con Av. Ramón Castilla)
+              ul.social-icon
+                li
+                  a.fa.fa-facebook-square(href='#', attr='facebook icon')
+                li
+                  a.fa.fa-twitter(href='#')
+                li
+                  a.fa.fa-instagram(href='#')
+              .copyright-text
+                p
+                  | Copyright © 2018 Company
+          .col-md-4.col-sm-6
+            .footer-info
+              .section-title
+                h2 Datos de contacto
+              address
+                p
+                  | +507 224 1100, +507 224 1101
+                p
+                  a(href='goodwarehouse@gmail.com') goodwarehouse@gmail.com
+              .footer_menu
+                h2 Quick Links
+                ul
+                  li
+                    a(href='#') Términos y condiciones
+                  li
+                    a(href='#') Politica de reembolso
+          .col-md-4.col-sm-12
+            .footer-info.newsletter-form
+              .section-title
+                h2 Inscríbase al boletín
+              div
+                .form-group
+                  form(action='#', method='get')
+                    input#email.form-control(type='email', placeholder='Ingrese su correo', name='email', required='')
+                    input#form-submit.form-control(type='submit', name='submit', value='Enviame')
+                  span
+                    sup *
+                    | Tenga en cuenta que no enviamos spam a su correo electrónico.
+    // SCRIPTS
+    script(src='js/jquery.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/owl.carousel.min.js')
+    script(src='js/login.js')
+    script(src='js/smoothscroll.js')
+    script(src='js/custom.js')
+    //fecha
+    script(src='http://momentjs.com/downloads/moment.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
