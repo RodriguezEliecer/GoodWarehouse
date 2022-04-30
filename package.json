@@ -20,7 +20,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "paypal-rest-sdk": "^1.8.1",
-    "save": "^2.3.2"
+    "save": "^2.3.2",
+    "bcrypt": "^5.0.1"
   },
   "devDependencies": {
     "bcrypt": "^5.0.1",
