@@ -1,4 +1,3 @@
-doctype 
 html(lang='en')
   head
     title GoodWarehouse
@@ -18,13 +17,10 @@ html(lang='en')
     // MAIN CSS
     link(rel='stylesheet', href='css/templatemo-style.css')
   body#top(data-spy='scroll', data-target='.navbar-collapse', data-offset='50')
-    
-
     // PRE LOADER
     section.preloader
       .spinner
         span.spinner-rotate
-        
     // MENU
     section.navbar.custom-navbar.navbar-fixed-top(role='navigation')
       .container
@@ -33,7 +29,7 @@ html(lang='en')
             span.icon.icon-bar
             span.icon.icon-bar
             span.icon.icon-bar
-          // lOGO TEXT HERE
+          // LOGO TEXT HERE
           a.navbar-brand(href='#') GoodWarehouse
         // MENU LINKS
         .collapse.navbar-collapse
@@ -108,42 +104,39 @@ html(lang='en')
             .entry-form
               form(action='#', method='post')
                 h2 Regístrate hoy
-                input.form-control(type='text', name='full name', placeholder='Ingrese un nombre de usurio', required='')
+                input.form-control(type='text', name='full name', placeholder='Ingrese un nombre de usuario', required='')
                 input.form-control(type='email', name='email', placeholder='Ingrese su correo', required='')
                 input.form-control(type='password', name='password', placeholder='Ingrese una contraseña', required='')
                 button#form-submit.submit-btn.form-control Registrarse
-    // Ubicacion
-    section#team
-      .container
-        .row
-          .col-md-12.col-sm-12
-            .section-title
-              h2 Ubicación 
-          .col-md-3.col-sm-6
-            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.5060698419975!2d-79.58488811870531!3d9.000653688172926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca7cba643f6f5%3A0xf6aaaaa1c407bff!2sClayton%2C+Panam%C3%A1!5e0!3m2!1ses!2spa!4v1529978128770', width='1150', height='450', frameborder='0', style='border:0', allowfullscreen='')
+      // Ubicacion
+      section#team
+        .container
+          .row
+            .col-md-12.col-sm-12
+              .section-title
+                h2 Ubicación 
+            .col-md-12.col-sm-12
+              .responsive-map-container
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.5060698419975!2d-79.58488811870531!3d9.000653688172926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca7cba643f6f5%3A0xf6aaaaa1c407bff!2sClayton%2C+Panam%C3%A1!5e0!3m2!1ses!2spa!4v1529978128770', frameborder='0', style='border:0', allowfullscreen='')
     // Productos o Servicios
-   
     section#courses   
       .container
         .row  
           .col-md-12.col-sm-12
-            
-              .section-title
-                h2
-                  | Tamaños Disponibles 
-                  small ¿Qué estará almacenando en GoodWarehouse?
-              .owl-carousel.owl-theme.owl-courses
-              
+            .section-title
+              h2
+                | Tamaños Disponibles 
+                small ¿Qué estará almacenando en GoodWarehouse?
+            .owl-carousel.owl-theme.owl-courses
                   //1
-                  .col-md-4.col-sm-4   
+                  .col-md-4.col-sm-
                     .item
-                    form(method='POST', action='/depositos')
-                      .courses-thumb
-                        input(name='id' type='hidden') 
-                        .courses-top
-                          .courses-image
+                      form(method='POST', action='/depositos')
+                        .courses-thumb
+                          input(name='id' type='hidden') 
+                          .courses-top
+                            .courses-image
                               img.img-responsive(src='images/Depositos/5mts.png', alt='') 
-                                 
                           .courses-date
                             span
                               i.fa.fa-calendar
@@ -151,25 +144,25 @@ html(lang='en')
                             span
                               i.fa.fa-clock-o
                               |  7 Hours
-                        .courses-detail
-                          h3
-                            a 5 Metros
-                          p
-                            | Puede almacenar artículos personales que no ocupen mucho espacio.
-                        .courses-info
-                          .courses-author
-                            input(name='id_art' type='hidden' value = '001') 
-                            input.form-control(type='submit', name='send message', value='Detalles')
-                          .courses-price
+                          .courses-detail
+                            h3
+                              a 5 Metros
+                            p
+                              | Puede almacenar artículos personales que no ocupen mucho espacio.
+                          .courses-info
+                            .courses-author
+                              input(name='id_art' type='hidden' value='001') 
+                              input.form-control(type='submit', name='send message', value='Detalles')
+                            .courses-price
                   //2
                   .col-md-4.col-sm-4
                     .item
-                    form(method='POST', action='/depositos')
-                      .courses-thumb
-                        .courses-top
-                          .courses-image
+                      form(method='POST', action='/depositos')
+                        .courses-thumb
+                          .courses-top
+                            .courses-image
                               img.img-responsive(src='images/Depositos/10mts.png', alt='')
-                              input(name='id_art' type='hidden' value = '002') 
+                              input(name='id_art' type='hidden' value='002') 
                           .courses-date
                             span
                               i.fa.fa-calendar
@@ -177,24 +170,24 @@ html(lang='en')
                             span
                               i.fa.fa-clock-o
                               |  7 Hours
-                        .courses-detail
-                          h3
-                            a 10 Metros
-                          p
-                            | Le permite guardar de forma cómoda sus pertenencias grandes.
-                        .courses-info
-                          .courses-author
-                            input.form-control(type='submit', name='send message', value='Detalles')
-                          .courses-price
+                          .courses-detail
+                            h3
+                              a 10 Metros
+                            p
+                              | Le permite guardar de forma cómoda sus pertenencias grandes.
+                          .courses-info
+                            .courses-author
+                              input.form-control(type='submit', name='send message', value='Detalles')
+                            .courses-price
                   //3
                   .col-md-4.col-sm-4
                     .item
-                    form(method='POST', action='/depositos')
-                      .courses-thumb
-                        .courses-top
-                          .courses-image
-                            img.img-responsive(src='images/Depositos/15mts.png', alt='')
-                            input(name='id_art' type='hidden' value = '003') 
+                      form(method='POST', action='/depositos')
+                        .courses-thumb
+                          .courses-top
+                            .courses-image
+                              img.img-responsive(src='images/Depositos/15mts.png', alt='')
+                              input(name='id_art' type='hidden' value='003') 
                           .courses-date
                             span
                               i.fa.fa-calendar
@@ -202,25 +195,25 @@ html(lang='en')
                             span
                               i.fa.fa-clock-o
                               |  7 Hours
-                        .courses-detail
-                          h3
-                            a 15 Metros
-                          p
-                            | Facilita movilizar aparatos o artículos que consumen mucho espacio.
-                        .courses-info
-                          .courses-author
-                            input.form-control(type='submit', name='send message', value='Detalles')
-                          .courses-price
+                          .courses-detail
+                            h3
+                              a 15 Metros
+                            p
+                              | Facilita movilizar aparatos o artículos que consumen mucho espacio.
+                          .courses-info
+                            .courses-author
+                              input.form-control(type='submit', name='send message', value='Detalles')
+                            .courses-price
                             
                   //4
                   .col-md-4.col-sm-4
                     .item
-                    form(method='POST', action='/depositos')
-                      .courses-thumb
-                        .courses-top
-                          .courses-image
-                            img.img-responsive(src='images/Depositos/22mts.png', alt='')
-                            input(name='id_art' type='hidden' value = '004') 
+                      form(method='POST', action='/depositos')
+                        .courses-thumb
+                          .courses-top
+                            .courses-image
+                              img.img-responsive(src='images/Depositos/22mts.png', alt='')
+                              input(name='id_art' type='hidden' value='004') 
                           .courses-date
                             span
                               i.fa.fa-calendar
@@ -228,25 +221,25 @@ html(lang='en')
                             span
                               i.fa.fa-clock-o
                               |  4.5 Hours
-                        .courses-detail
-                          h3
-                            a 22 Metros
-                          p
-                            | Le permite guardar su mercancía con facilidad, espacio muy amplio.
-                        .courses-info
-                          .courses-author
-                            input.form-control(type='submit', name='send message', value='Detalles')
-                          .courses-price
+                          .courses-detail
+                            h3
+                              a 22 Metros
+                            p
+                              | Le permite guardar su mercancía con facilidad, espacio muy amplio.
+                          .courses-info
+                            .courses-author
+                              input.form-control(type='submit', name='send message', value='Detalles')
+                            .courses-price
                             
                   //5
                   .col-md-4.col-sm-4
                     .item
-                    form(method='POST', action='/depositos')
-                      .courses-thumb
-                        .courses-top
-                          .courses-image
-                            img.img-responsive(src='images/Depositos/30mts.png', alt='')
-                            input(name='id_art' type='hidden' value = '005')   
+                      form(method='POST', action='/depositos')
+                        .courses-thumb
+                          .courses-top
+                            .courses-image
+                              img.img-responsive(src='images/Depositos/30mts.png', alt='')
+                              input(name='id_art' type='hidden' value='005')   
                           .courses-date
                             span
                               i.fa.fa-calendar
@@ -254,15 +247,15 @@ html(lang='en')
                             span
                               i.fa.fa-clock-o
                               |  6 Hours
-                        .courses-detail
-                          h3
-                            a 30 Metros
-                          p
-                            | Perfecto para guardar su mercancía y libere espacio en su negocio.
-                        .courses-info
-                          .courses-author
-                            input.form-control(type='submit', name='send message', value='Detalles')
-                          .courses-price
+                          .courses-detail
+                            h3
+                              a 30 Metros
+                            p
+                              | Perfecto para guardar su mercancía y liberar espacio en su negocio.
+                          .courses-info
+                            .courses-author
+                              input.form-control(type='submit', name='send message', value='Detalles')
+                            .courses-price
     // Comentarios Clientes
     section#testimonial
       .container
