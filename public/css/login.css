@@ -3,10 +3,13 @@
    -------------------------------------------------- */
    #login {
     padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
 }
 
 #login .form-wrap {
-    width: 90%; /* Se ajusta el ancho al 90% para una mejor adaptabilidad */
+    width: 90%; /* Ancho del formulario al 90% */
+    max-width: 400px; /* Máximo ancho del formulario */
     margin: 0 auto;
 }
 
@@ -20,16 +23,13 @@
 
 #login .form-group {
     margin-bottom: 25px;
+    text-align: center; /* Centra horizontalmente los elementos */
 }
 
 #login .checkbox {
     margin-bottom: 20px;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+    display: inline-block; /* Hace que el checkbox y su etiqueta se muestren en línea */
 }
 
 #login .checkbox.show:before {
@@ -56,11 +56,14 @@
     color: #6d6d6d;
     font-size: 13px;
     font-weight: normal;
+    display: inline-block; /* Hace que la etiqueta se muestre en línea */
+    vertical-align: middle; /* Alinea verticalmente con el checkbox */
 }
 
 #login .btn.btn-custom {
     font-size: 14px;
     margin-bottom: 20px;
+    width: 100%; /* Ancho del botón al 100% */
 }
 
 #login .forget {
@@ -74,6 +77,11 @@
    -------------------------------------------------- */
 .form-control {
     color: #212121;
+    width: 100%; /* Ancho del input al 100% */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 3px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
 }
 
 .btn-custom {
@@ -98,9 +106,8 @@
     text-align: center; /* Alinea el contenido al centro */
 }
 
-.modal-footer input.btn {
-    margin-right: 10px; /* Agrega un margen entre los botones */
-}
+.modal-footer input.btn,
 .modal-footer button.btn {
     margin-right: 10px; /* Agrega un margen entre los botones */
 }
+
